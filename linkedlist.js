@@ -1,3 +1,0 @@
-class LinkedList {
-  constructor(...items) {}
-}

@@ -2,8 +2,9 @@
 
 Data structures and algorithms in Javascript
 
-Reference:
+References:
 "Data Structures in JavaScript: For Frontend Software Engineers", by Thon Ly (medium.com)
+"Computer Science in JavaScript" blogpost series, by Nicholas C. Zakas (humanwhocodes.com)
 
 TODO:
 
