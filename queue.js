@@ -6,11 +6,11 @@ class Queue {
 
   enqueue(...items) {
     return this.reverse
-      ? this.buffer.push(...items)
-      : this.buffer.unshift(...items);
+      ? this.buffer.unshift(...items)
+      : this.buffer.push(...items);
   }
 
   dequeue() {
-    return this.reverse ? this.buffer.shift() : this.buffer.pop();
+    return this.reverse ? this.buffer.pop() : this.buffer.shift();
   }
 }
