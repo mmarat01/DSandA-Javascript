@@ -11,4 +11,6 @@ const reverseString = (string) => {
 };
 
 // III: nifty JS method
-const niftyReverse = (string) => {};
+const niftyReverse = (string) => {
+  string.split("").reduce((reversedString, char) => char + reversedString);
+};
