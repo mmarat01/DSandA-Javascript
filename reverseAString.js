@@ -1,4 +1,6 @@
-// I: a string of character -> O: reversed string
+// I: a string of characters -> O: reversed string
+
+// 1: trivial method
 /*
   split string into array of characters
   reverse the array of characters
@@ -6,7 +8,7 @@
  */
 const trivialReverse = (string) => string.split("").reverse().join("");
 
-// II: real method
+// 2: real method
 /*
   loop thru each string char
   have running 'total'
@@ -27,7 +29,7 @@ const reverseString = (string) => {
   return reversedString;
 };
 
-// III: nifty JS method
+// 3: nifty JS method
 /*
   same as above but in reduce function
   reduce takes 2 args (accumulator, current element)
