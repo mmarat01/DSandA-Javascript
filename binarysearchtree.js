@@ -134,4 +134,48 @@ class BinarySearchTree {
     if (!node.left) return null;
     return this._kthSmallestNode(node.left);
   }
+
+  // count all nodes
+  countNodes() {
+    this.countNodesHelper(this.root);
+  }
+
+  // countnodes recursive helper
+  _countNodesHelper(node) {
+    if (!node) return 0;
+    return (
+      1 + this._countNodesHelper(node.left) + this._countNodesHelper(node.right)
+    );
+  }
+
+  // height
+  treeHeight() {
+    return this._treeHeightHelper(this.root);
+  }
+
+  // height recursive helper
+  _treeHeightHelper(node) {
+    // the empty tree
+    if (!node) return -1;
+    // traverse down both ends
+    let leftHeight = this._treeHeightHelper(node.left);
+    let rightHeight = this._treeHeightHelper(node.right);
+    // height is largest of 2 children + 1 (me)
+    return 1 + (leftHeight > rightHeight ? leftHeight : rightHeight);
+  }
+
+  // count total num values (including duplicates)
+  countTotalValues() {
+    return this._countTotalValuesHelper(root);
+  }
+
+  // count toal values recursive helper
+  _countTotalValuesHelper(node) {
+    if (!node) return 0;
+    return (
+      node.value * node.count +
+      this._countTotalValuesHelper(node.left) +
+      this._countTotalValuesHelper(node.right)
+    );
+  }
 }
